@@ -4,18 +4,23 @@
 
 & when (@media-common = true) {
     .private-data-consent {
-        border: 1px solid #ddd;
         .lib-vendor-prefix-display(flex);
         .lib-vendor-box-align(center);
         .lib-vendor-prefix-flex-wrap(nowrap);
         justify-content: center;
-        gap: 1.5rem;
+        gap: 3rem;
 
         section {
-            border: 1px solid #ddd;
             .lib-vendor-prefix-flex-grow(1);
             .lib-vendor-prefix-flex-shrink(1);
-            .lib-vendor-prefix-flex-basis(50%);
+
+            &.image {
+                .lib-vendor-prefix-flex-basis(25%);
+            }
+            &.description {
+                .lib-vendor-prefix-flex-basis(75%);
+                text-align: justify;
+            }
         }
     }
 
@@ -23,6 +28,7 @@
         input[name="telephone"] {
             &~.field-error {
                 font-weight: bold;
+                color: red;
             }
         }
     }

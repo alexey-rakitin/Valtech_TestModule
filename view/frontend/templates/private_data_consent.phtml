@@ -6,8 +6,11 @@
 ?>
 
 <div class="private-data-consent">
-    <section>img here</section>
-    <section>
+    <section class="image">
+        <img src="<?= $escaper->escapeUrl($block->getViewFileUrl('Valtech_TestModule/images/image-left-test.jpg')) ?>"
+            alt="<?= $escaper->escapeHtml(__('Fancy High Heels')) ?>"/>
+    </section>
+    <section class="description">
         <?= $escaper->escapeHtml(__('Your data is collected by us for the sole purpose of providing you with' .
             ' a quality service as expected when you create an account on our site.')) ?>
     </section>
